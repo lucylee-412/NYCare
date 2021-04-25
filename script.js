@@ -21,14 +21,14 @@ L.marker([40.7306, -73.9352])
   .bindPopup("A pretty CSS3 popup.<br> Easily customizable.")
   .openPopup();
 
-document.getElementById("resource1").addEventListener("click", displayMarker);
-document.getElementById("resource2").addEventListener("click", displayMarker);
-document.getElementById("resource3").addEventListener("click", displayMarker);
-document.getElementById("resource4").addEventListener("click", displayMarker);
-document.getElementById("resource5").addEventListener("click", displayMarker);
-document.getElementById("resource6").addEventListener("click", displayMarker);
-document.getElementById("resource7").addEventListener("click", displayMarker);
-document.getElementById("resource8").addEventListener("click", displayMarker);
-
-function displayMarker() {
+// loop through all the resources box and add event listeners
+for (idx = 1; idx < 9; idx++) {
+  document.getElementById(`resource${idx}`).addEventListener("change", (e) => {
+    // check if checkbox is checked
+    if (e.target.checked) {
+      console.log("checked");
+    } else {
+      console.log("unchecked");
+    }
+  });
 }
