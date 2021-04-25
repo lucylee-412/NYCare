@@ -32,6 +32,13 @@ body {
 h2 {
   padding: 0px 22px ;
 }
+h3 {
+  padding: 0px 25px ;
+}
+
+hr.solid {
+  border-top: 1px solid #ffbc60;
+}
 
 #main {
   display: flex;
@@ -52,4 +59,8 @@ h2 {
 
 #map {
   height: 100%;
+}
+
+.block {
+    position: fixed;
 }
