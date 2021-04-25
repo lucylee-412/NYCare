@@ -1,27 +1,28 @@
 body {
   background-color: #f5f6fa;
   font-family: Garamond, Arial, Helvetica, sans-serif;
+  margin: 0;
 }
 
 .header {
   overflow: hidden;
   background-color: #ffbc60;
-  padding: 20px 10px;
+  padding: 15px 10px;
 }
 
 .header a {
   float: left;
   color: black;
   text-align: center;
-  padding: 12px;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 14px;
   line-height: 25px;
   border-radius: 4px;
+  padding: 5px 20px;
 }
 
 .header a.logo {
-  font-size: 36px;
+  font-size: 24px;
   font-weight: bold;
 }
 
@@ -35,15 +36,14 @@ body {
 }
 */
 
-h2 {
-  padding: 0px 22px ;
-}
-h3 {
-  padding: 0px 25px ;
+form {
+  display: flex;
+  flex-direction: column;
 }
 
-hr.solid {
+.solid {
   border-top: 1px solid #ffbc60;
+  margin: 20px auto;
 }
 
 #main {
@@ -55,6 +55,7 @@ hr.solid {
 
 #left {
   background-color: white;
+  padding: 30px;
   flex: 0.175;
 }
 
