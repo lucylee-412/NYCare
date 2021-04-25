@@ -29,22 +29,32 @@ body {
   float: right;
 }
 
+h2 {
+  padding: 0px 22px ;
+}
+h3 {
+  padding: 0px 25px ;
+}
+
+hr.solid {
+  border-top: 1px solid #ffbc60;
+}
+
 #main {
   display: flex;
-  width: 70%;
-  padding: 20px;
+  /*padding: 20px;*/
   justify-content: space-evenly;
   margin: 0 auto;
 }
 
 #left {
   background-color: white;
-  flex: 0.3;
+  flex: 0.175;
 }
 
 #right {
-  flex: 0.7;
-  height: 600px;
+  flex: 0.825;
+  height: 800px;
 }
 
 #map {
