@@ -1,4 +1,6 @@
-* {box-sizing: border-box;}
+body {
+  font-family: Garamond, Arial, Helvetica, sans-serif;
+}
 .header {
   overflow: hidden;
   background-color: #FFBC60;
@@ -17,10 +19,6 @@
 .header a.logo {
   font-size: 36px;
   font-weight: bold;
-}
-.header a.active {
-  background-color: #FFF5D6;
-  color: black;
 }
 .header-right {
   float: right;
