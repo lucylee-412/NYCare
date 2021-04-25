@@ -29,6 +29,12 @@ body {
   float: right;
 }
 
+/*
+.header-right:hover {
+  background-color: #fff5d6;
+}
+*/
+
 h2 {
   padding: 0px 22px ;
 }
