@@ -48,15 +48,51 @@ function removeMarkers(id) {
   delete markers[id];
 }
 
+var colors = {
+  clothing_charities:
+    "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png",
+  food_pantries:
+    "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png",
+  food_scraps:
+    "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png",
+  homeless_shelters:
+    "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png",
+  senior_centers:
+    "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png",
+  snap_centers:
+    "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png",
+  soup_kitchens:
+    "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-yellow.png",
+  volunteer:
+    "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-grey.png",
+};
+
 // load data from a specific json using input id
 function loadJSON(id) {
   fetch(`./data/${id}.json`)
     .then((response) => response.json())
     .then((json) => {
       markers[id] = [];
+      var icon = new L.Icon({
+        iconUrl: `${colors[id]}`,
+        shadowUrl:
+          "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41],
+      });
       // display markers
       for (obj of json) {
-        var marker = new L.marker([obj.lat, obj.lng]);
+        var marker = new L.marker([obj.lat, obj.lng], { icon: icon });
+        marker
+          .bindPopup(
+            `<div class="info-name">${obj["Name"]}</div>
+             <div class="info"><strong style="color:#555;">Address:</strong> ${obj["Address"]}, ${obj["Borough"]}, ${obj["Zip Code"]}</div>
+             <div class="info"><strong style="color:#555;">Phone Number:</strong> ${obj["Phone Number"]}</div>
+            `
+          )
+          .openPopup();
         map.addLayer(marker);
 
         markers[id].push(marker);
