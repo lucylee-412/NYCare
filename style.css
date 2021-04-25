@@ -79,3 +79,12 @@ form {
   font-size: 14px;
   margin-top: 5px;
 }
+
+.mission {
+  background-color: white;
+  padding: 30px;
+  width: 50%;
+  margin: 20px auto;
+  border-radius: 15px;
+  line-height: 1.8rem;
+}
