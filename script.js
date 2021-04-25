@@ -20,3 +20,15 @@ L.marker([40.7306, -73.9352])
   .addTo(map)
   .bindPopup("A pretty CSS3 popup.<br> Easily customizable.")
   .openPopup();
+
+document.getElementById("resource1").addEventListener("click", displayMarker);
+document.getElementById("resource2").addEventListener("click", displayMarker);
+document.getElementById("resource3").addEventListener("click", displayMarker);
+document.getElementById("resource4").addEventListener("click", displayMarker);
+document.getElementById("resource5").addEventListener("click", displayMarker);
+document.getElementById("resource6").addEventListener("click", displayMarker);
+document.getElementById("resource7").addEventListener("click", displayMarker);
+document.getElementById("resource8").addEventListener("click", displayMarker);
+
+function displayMarker() {
+}
