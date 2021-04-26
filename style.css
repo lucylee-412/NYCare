@@ -13,8 +13,10 @@ body {
 }
 
 .header {
-  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
   background-color: #ffbc60;
+  width: 100%;
   padding: 15px 10px;
 }
 
@@ -26,17 +28,12 @@ body {
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 2px;
-  border-radius: 4px;
   padding: 5px 20px;
 }
 
 .header a.logo {
   font-size: 24px;
   font-weight: bold;
-}
-
-.header-right {
-  float: right;
 }
 
 /*
@@ -92,22 +89,24 @@ form input {
 }
 
 .img {
+  box-sizing: border-box;
   background-image: url(./assets/nyc_view.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 350px;
-  width: 50%;
-  padding: 30px;
+  width: 680px;
+  padding: 50px;
   margin: 0 auto;
   margin-top: 20px;
 }
 
 .mission {
   font-family: Georgia, "Times New Roman", Times, serif;
+  box-sizing: border-box;
   background-color: white;
-  padding: 8px 30px;
-  width: 50%;
+  padding: 8px 50px;
+  width: 680px;
   margin: 20px auto;
   margin-bottom: 40px;
   border-radius: 15px;
@@ -115,4 +114,30 @@ form input {
   font-size: 20px;
   font-weight: 400;
   line-height: 32px;
+}
+
+@media screen and (max-width: 480px) {
+  #main {
+    flex-direction: column;
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  #main #left {
+    padding-top: 5px;
+  }
+
+  #map {
+    height: 400px;
+  }
+
+  .mission {
+    font-size: 18px;
+    line-height: 28px;
+    width: 90%;
+    padding: 5px 10px;
+  }
+  .mission p {
+    margin: 10px 0;
+  }
 }
