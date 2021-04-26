@@ -99,3 +99,19 @@ function loadJSON(id) {
       }
     });
 }
+
+const submitForm = () => {
+  const zip = document.getElementById("zipcode").value;
+  const url = `https://thezipcodes.com/api/v1/search?zipCode=${zip}&countryCode=US&apiKey=f79320cb90ef3cfb0a1c4de0f92ad554`;
+  fetch(url)
+    .then((res) => res.json())
+    .then((json) => {
+      console.log(json);
+      if (json.location === undefined || json.location == 0) {
+        alert("Invalid zipcode!");
+      } else if (!json.success) {
+        alert("Zipcode lookup failed!");
+      }
+      map.setView([json.location[0].latitude, json.location[0].longitude], 14);
+    });
+};
