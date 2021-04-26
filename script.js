@@ -100,10 +100,10 @@ function loadJSON(id) {
     });
 }
 
-const submitForm = () => {
+async function submitForm() {
   const zip = document.getElementById("zipcode").value;
-  const url = `https://thezipcodes.com/api/v1/search?zipCode=${zip}&countryCode=US&apiKey=f79320cb90ef3cfb0a1c4de0f92ad554`;
-  fetch(url)
+  const url = `https://glacial-coast-57575.herokuapp.com/https://thezipcodes.com/api/v1/search?zipCode=${zip}&countryCode=US&apiKey=f79320cb90ef3cfb0a1c4de0f92ad554`;
+  const response = await fetch(url)
     .then((res) => res.json())
     .then((json) => {
       console.log(json);
@@ -113,5 +113,8 @@ const submitForm = () => {
         alert("Zipcode lookup failed!");
       }
       map.setView([json.location[0].latitude, json.location[0].longitude], 14);
+    })
+    .catch((err) => {
+      console.log("Request failed! " + err);
     });
-};
+}
