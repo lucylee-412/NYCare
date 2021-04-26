@@ -50,9 +50,31 @@ form input {
   margin-left: 10px;
 }
 
+#submit {
+  border: none;
+  cursor: pointer;
+  padding: 8px 0px;
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 20px;
+}
+
+#submit:focus {
+  border: none;
+}
+
+#submit:active {
+  border: none;
+}
+
 .solid {
   border-top: 1px solid #ffbc60;
   margin: 20px auto;
+}
+
+h2 {
+  margin: 10px 0;
+  color: #444;
 }
 
 #main {
