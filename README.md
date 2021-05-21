@@ -1,4 +1,4 @@
-# NYCare
+# NYCare (Winner project!) c:
 ###### Contributors: Lucy Lee, Sean Yap
 
 *Sean Yap and Lucy Lee's team submission for Hack Brooklyn 2021's Accessibility track.*
@@ -10,3 +10,4 @@ Our goal is to provide an intuitive and simple tool that hosts all the informati
 Likewise, a site visitor who is looking for assistance can also use our website to search for nearby centers offering immediate aid. Redirect links to the appropriate applications and contact forms will be given.
 
 Link: [Home page](https://lucylee-412.github.io/NYCare/Aid.html)
+Link: [Devpost](https://devpost.com/software/nycare)
